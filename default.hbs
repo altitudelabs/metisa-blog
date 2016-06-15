@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>{{meta_title}}</title>
+    {{> meta}}
+    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Open+Sans:700,400,200" />
+    <link rel="stylesheet" type="text/css" href="{{asset "css/bloggy.css"}}" />
+    {{ghost_head}}
+  </head>
+  <body class="{{body_class}}">
+    <div id="fb-root"></div>
+    {{!-- {{> widgets/subscribe-banner}} --}}
+    <header id="global-header" class="global-header navbar">
+      {{navigation}}
+    </header>
+    <main role="main">
+      <div class="page-wrapper">
+        {{{body}}}
+        <div class="clearfix"></div>
+      </div>
+    </main>
+    <div class="modal fade" id="blogsubscribe" tabindex="-1" role="dialog" aria-labelledby="Email subscription modal" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <header class="modal-header">
+          <h4 class="modal-title">The latest content, occasionally.</h4>
+          <a class="modal-close" data-dismiss="modal" aria-hidden="true" href="#"><span class="hidden">Close</span></a>
+        </header>
+        <div class="modal-body">
+          <form id="newsletter_form" action="//altitudelabs.us11.list-manage.com/subscribe/post?u=bfd1e1afc9f05d87c5e366ae1&amp;id=4e5bc854f5" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+            <input id="fieldEmail" type="email" value="" placeholder="Your email address" name="EMAIL" required>
+            <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+            <div style="position: absolute; left: -5000px;" aria-hidden="true"><input type="text" name="b_c6323ba5f5f4afeec2c624d39_0ee0695955" tabindex="-1" value=""></div>
+            <div class="clear"><input type="submit" value="Send me good stuff" name="subscribe" id="newsletter_subscribe" class="button-add wide"></div>
+            <p>No spam. No jibber jabber. Unsubscribe any time.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="clearfix"></div>
+    {{> footer}}
+    {{ghost_foot}}
+    <script type="text/javascript" src="{{asset "vendor/jquery/dist/jquery.min.js"}}"></script>
+    <script type="text/javascript" src="{{asset "js/bloggy.en_US.js"}}"></script>
+    {{> google-analytics}}
+    {{> share/scripts/twitter}}
+  </body>
+</html>
