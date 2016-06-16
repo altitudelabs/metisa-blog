@@ -165,15 +165,27 @@
 }
 
 .share {
-  margin: 1.6em 0;
+  position: fixed;
+  left: 10px;
+  bottom: 10px;
+  width: 20px;
 
-  @include breakpoint(750px) {
-    display: none;
+  .fb-share-button {
+    margin-bottom: 8px;
   }
 }
 
-.twitter-share-button {
-  margin-right: 30px;
+@media (max-width: 768px) {
+  .share {
+    position: relative;
+    left: auto;
+    right: auto;
+    width: 100%;
+
+    .fb-share-button span {
+      vertical-align: baseline !important;
+    }
+  }
 }
 
 .fb-like {
