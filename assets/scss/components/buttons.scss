@@ -6,9 +6,9 @@
 .button-add,
 .button-add[type="submit"] {
   transition: all 0.5s ease;
-  background: white;
-  border: 2px solid $feature-one-color;
-  color: $feature-one-color;
+  background-color: $feature-one-color;
+  border-bottom: 3px solid $feature-one-color-dark;
+  color: #fff;
 }
 
 .button-green:not(.button-loading):hover,

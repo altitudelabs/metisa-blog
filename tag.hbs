@@ -1,11 +1,5 @@
 {{!< default}}
 
-<header class="blog-header">
-    <div class="vertical">
-        <h1>Posts on {{tag.name}}</h1>
-    </div>
-</header>
-
 <div class="wrap">
     <section class="blog-content">
 
@@ -13,20 +7,24 @@
 
         <article class="{{post_class}}">
             <header class="post-header">
+                {{#if image}}
+                    {{#unless featured}}
+                        <div class="post-cover" style="background-image: url({{image}})"></div>
+                    {{/unless}}
+                {{/if}}
+            </header>
+            <section class="post-excerpt">
                 <h2 class="post-title"><a href="{{url}}">{{{title}}}</a></h2>
                 <section class="post-meta">
+                    {{!-- <img class="author-img" src="{{author.image}}" alt="Author image" nopin="nopin" /> --}}
                     <span class="author-name">{{author}}</span>
                     &bull;
                     <time datetime="{{date format='YYYY-MM-DD'}}">{{date format="D MMM YYYY"}}</time>
                     <span class="tags">{{tags prefix="• " separator=" "}}</span>
                 </section>
-            </header>
-            <section class="post-excerpt">
-                <p>{{excerpt words="55"}}&hellip;</p>
-            </section>
-            <footer class="more-links">
+                <p>{{excerpt words="20"}}&hellip;</p>
                 <a class="read-more button-save" href="{{url}}">Read More</a>
-            </footer>
+            </section>
         </article>
 
         {{/foreach}}

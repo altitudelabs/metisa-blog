@@ -155,8 +155,6 @@ input::-moz-focus-inner {
 .modal-content {
   position: relative;
   background-color: #ffffff;
-  border: 1px solid #999999;
-  border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 6px;
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
@@ -353,7 +351,7 @@ h2 {
   font-size: 4.5rem;
   padding-top: 0.8em;
   margin-top: 0.8em;
-  border-top: #e2edf2 1px solid;
+  border-top: $lightgrey 1px solid;
   margin-bottom: 0.45rem;
 }
 
@@ -450,7 +448,7 @@ nav ul {
   list-style: none;
   margin: 0;
   padding: 0;
-  border-top: #e2edf2 1px solid;
+  border-top: $lightgrey 1px solid;
 }
 
 nav li {
@@ -462,7 +460,7 @@ nav li a {
   display: block;
   padding: 10px 15px;
   color: #7d878a;
-  border-bottom: #e2edf2 1px solid;
+  border-bottom: $lightgrey 1px solid;
 }
 
 nav li a:hover {
@@ -646,10 +644,11 @@ nav li a:before {
 .global-header li a {
   display: block;
   height: 60px;
+  font-size: 16px;
   padding: 21px 20px;
   border-bottom: none;
-  color: #242628;
-  text-transform: uppercase;
+  color: $darkgrey;
+  cursor: pointer;
        box-sizing: border-box;
   -moz-box-sizing: border-box;
        box-sizing: border-box;
@@ -663,7 +662,7 @@ nav li a:before {
 }
 
 .global-header li a:hover {
-  color: $link-hover-color;
+  font-weight: bold;
   text-decoration: none;
   background: none;
 }
@@ -759,6 +758,7 @@ nav li a:before {
   text-transform: none;
   font-weight: $font-weight-normal;
   color: #7d878a;
+  width: 600px;
 }
 
 @media (max-width: 600px), (max-width: 600px) {
@@ -816,7 +816,7 @@ nav li a:before {
 #footer-nav {
   max-width: 1100px;
   margin: 0 auto 80px auto;
-  border-bottom: #e2edf2 1px solid;
+  border-bottom: $lightgrey 1px solid;
   position: relative;
   text-transform: uppercase;
 }
@@ -898,23 +898,10 @@ nav li a:before {
        box-sizing: border-box;
   display: block;
   position: absolute;
-  top: 25px;
+  font-size: 24px;
+  top: 10px;
   right: 20px;
   color: #b3b9ba;
-}
-
-.modal-close:before {
-  font-family: "Icons";
-  font-weight: $font-weight-normal;
-  font-style: normal;
-  vertical-align: -7%;
-  text-transform: none;
-  speak: none;
-  line-height: 1;
-  font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  content: "\e020";
-  font-size: 18px;
 }
 
 .modal-close:hover {
@@ -935,7 +922,6 @@ nav li a:before {
        box-sizing: border-box;
   -moz-box-sizing: border-box;
        box-sizing: border-box;
-  border: 8px rgba(0, 0, 0, 0.2) solid;
   box-shadow: none;
   box-shadow: none;
 }
@@ -956,10 +942,10 @@ form input {
   padding: 5px;
   margin: 0 0 5px 0;
   outline: 0;
-  font-size: 1.6rem;
+  font-size: 16px;
   line-height: 1.4em;
   background: #fff;
-  border: #d0e2ea 1px solid;
+  border: $midgrey 1px solid;
   border-radius: 2px;
   box-shadow: rgba(0, 0, 0, 0.05) 0 1px 3px inset;
        transition: all 0.15s ease-out 0;
@@ -1000,12 +986,11 @@ button[type="submit"],
   outline: none;
   text-decoration: none;
   color: #fff;
-  font-size: 11px;
+  font-size: 16px;
+  font-weight: normal;
   line-height: 13px;
   font-weight: $font-weight-thin;
   text-align: center;
-  letter-spacing: 1px;
-  text-transform: uppercase;
   text-shadow: none;
   border-radius: 0.3rem;
   border: rgba(0, 0, 0, 0.05) 0.1em solid;
@@ -1018,14 +1003,13 @@ button[type="submit"],
 button:not(.button-loading):hover,
 .button-save:not(.button-loading):hover,
 .button-add:not(.button-loading):hover {
-  border-color: transparent;
   background: #f8f8f8;
   text-decoration: none;
 }
 
 .large.button-add {
   padding: 1em 1.8em;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 16px;
   border-radius: 0.5rem;
 }
@@ -1104,8 +1088,7 @@ main {
   max-width: 1100px;
   margin: 50px auto 50px auto;
   background: #fff;
-  border: #e2edf2 1px solid;
-  border-radius: 2px;
+  border-top: $lightgrey 1px solid;
 }
 
 @media (max-width: 1130px), (max-width: 1130px) {
