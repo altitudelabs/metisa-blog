@@ -1,22 +1,42 @@
 /*  Widget */
 
 .blog-subscribe {
-  padding: 0;
-
+  padding: 20px 15px;
   text-align: center;
+  border: 1px solid $lightbrown;
+  border-radius: 4px;
+  background-color: #fff;
 
   h3 {
     font-weight: bold;
+    color: $darkgrey;
+    font-size: 20px;
     text-transform: uppercase;
     margin-bottom: 15px;
   }
 
   p {
-    margin: 1rem 0 2.5rem;
-
-    font-size: 1.6rem;
+    margin: 1rem 0 2rem;
+    line-height: 2rem;
+    font-size: 14px;
     font-weight: 200;
-
     color: $brown;
+  }
+
+  #newsletter-form {
+    margin-top: 0px;
+    margin-bottom: 0px;
+
+    #fieldEmail {
+      font-size: 14px;
+      border: 1px solid $lightbrown;
+      padding: 8px 10px;
+      border-radius: 4px;
+      margin-bottom: 2rem;
+
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+    }
   }
 }
