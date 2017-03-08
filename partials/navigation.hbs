@@ -1,20 +1,22 @@
 <nav role="navigation">
   <div class="wrapper">
-    <a class="blog-logo" href="http://askmetisa.com">
-      <img src="{{asset "/images/logo-metisa.png"}}" alt="Artificial intelligence for retail marketing">
+    <a class="blog-logo" href="http://askmetisa.com/blog">
+      <img src="{{asset "/images/logo-metisa.png"}}" alt="e-commerce retail data science">
       <span></span>
     </a>
 
-    <button type="button" class="mobile-menu" data-toggle="collapse" data-target=".navbar-collapse">
+    {{!-- <button type="button" class="mobile-menu" data-toggle="collapse" data-target=".navbar-collapse">
       <span class="hidden">Menu</span>
-    </button>
+    </button> --}}
 
-    <ul id="main-menu" class="navbar-collapse collapse">
+    <div class="brought-to-you">Brought to you by <a href="https://askmetisa.com">Metisa</a>, an AI powered technology that converts e-commerce data to sales.</div>
+
+    {{!-- <ul id="main-menu" class="navbar-collapse collapse">
       {{#foreach navigation}}
       <li class="nav-{{slug}} {{#if current}} nav-current{{/if}}">
         <a href="{{this.url}}">{{label}}</a>
       </li>
       {{/foreach}}
-    </ul>
+    </ul> --}}
   </div>
 </nav>
