@@ -55,12 +55,11 @@ a.twitter-box {
 }
 
 .twitter-box-content {
-  padding: 50px 10px 10px;
-
+  padding: 10px;
   text-align: center;
-
   border: #eee 1px solid;
-  border-top: none;
+  border-radius: 4px;
+  background-color: $lightgrey;
 
   h4 {
     font-size: 2rem;
